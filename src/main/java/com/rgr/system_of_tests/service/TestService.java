@@ -103,11 +103,6 @@ public class TestService {
     }
     public void deleteTest(long id){
         Test test = testsRepository.findId(id);
-        List <Question> questions = questionRepository.findByTestId(test.getId());
-        for (Question q: questions) {
-            File file = new File(uploadPath+"/"+q.getFilename());
-            file.delete();
-        }
         testsRepository.delete(test);
     }
     public void addTest(Map<String, String> form,MultipartFile[] files){
