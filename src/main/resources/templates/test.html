@@ -32,8 +32,8 @@
                 </div>
             </div>
         </div>
-        <input class="btn btn-dark" type="submit" th:value="#{passTest.button.complete}">
-        <p id="timer" th:if="${el.getLimited()}"></p>
+            <input class="btn btn-dark" type="submit" th:value="#{passTest.button.complete}" style="display: inline-block">
+            <b><p id="timer" th:if="${el.getLimited()}" class="ml-2" style="display: inline-block; padding: 0"></p></b>
     </form>
 </div>
 </body>
