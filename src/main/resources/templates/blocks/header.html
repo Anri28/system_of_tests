@@ -4,8 +4,8 @@
                 <ul class="h nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" width="40" height="32">
                     <li><a href="/" class="nav-link px-2 text-white" th:text="#{header.about}"></a></li>
                     <li><a href="/test" class="nav-link px-2 text-white" th:text="#{header.tests}"></a></li>
-                    <li><a sec:authorize="hasAuthority('ADMIN')" href="/admin" class="nav-link px-2 text-white" th:text="#{header.admin}"></a></li>
                     <li><a sec:authorize="hasAnyAuthority('TESTER','ADMIN')" href="/test/add" class="nav-link px-2 text-white" th:text="#{header.addTest}"></a></li>
+                    <li><a sec:authorize="hasAuthority('ADMIN')" href="/admin" class="nav-link px-2 text-white" th:text="#{header.admin}"></a></li>
                 </ul>
 
                 <div class="text-end">
